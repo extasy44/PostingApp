@@ -9,7 +9,8 @@ const fse = require("fs-extra");
 class RunAfterCompile {
   apply(compiler) {
     compiler.hooks.done.tap("Copy files", function () {
-      fse.copySync("./app/main.css", "./dist/main.css", "./app/logo.png");
+      fse.copySync("./app/main.css", "./dist/main.css");
+      fse.copySync("./app/components/images", "./dist/components/images");
 
       /*
         If you needed to copy another file or folder

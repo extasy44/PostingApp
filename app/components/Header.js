@@ -19,7 +19,7 @@ const Header = (props) => {
       <div className="d-flex flex-column flex-md-row align-items-center p-3">
         <h4 className="my-0 mr-md-auto font-weight-normal">
           <Link to="/" className="text-white">
-            <img src="../logo.png" alt="Logo" width="150px" />
+            <img src="components/images/logo.png" alt="Logo" width="150px" />
           </Link>
         </h4>
         {!props.staticEmpty ? headerContent : ""}
