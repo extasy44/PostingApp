@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import HeaderLoggedOut from "./HeaderLoggedOut";
@@ -19,7 +19,7 @@ const Header = (props) => {
       <div className="d-flex flex-column flex-md-row align-items-center p-3">
         <h4 className="my-0 mr-md-auto font-weight-normal">
           <Link to="/" className="text-white">
-            SaySay
+            <img src="logo.png" alt="Logo" width="150px" />
           </Link>
         </h4>
         {!props.staticEmpty ? headerContent : ""}
