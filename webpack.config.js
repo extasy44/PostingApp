@@ -6,15 +6,10 @@ const HtmlWebpackHarddiskPlugin = require("html-webpack-harddisk-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const fse = require("fs-extra");
 
-/*
-  Because I didn't bother making CSS part of our
-  webpack workflow for this project I'm just
-  manually copying our CSS file to the DIST folder. 
-*/
 class RunAfterCompile {
   apply(compiler) {
     compiler.hooks.done.tap("Copy files", function () {
-      fse.copySync("./app/main.css", "./dist/main.css");
+      fse.copySync("./app/main.css", "./dist/main.css", "./app/logo.png");
 
       /*
         If you needed to copy another file or folder
